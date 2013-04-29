@@ -1,0 +1,21 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to t('application.name'), root_path, class: 'brand' %>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+          <% top_navigation_urls.each do |label, url| %>
+            <li class="<%= url == url_for() ? 'active' : '' %>">
+              <%= link_to label, url %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
