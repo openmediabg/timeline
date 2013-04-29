@@ -15,9 +15,11 @@ bg:
     models:
       event: 'Събитие'
       category: 'Категория'
+      media_type: 'Тип медия'
     attributes:
       event:
         category: 'Категория'
+        media_type: 'Тип медия'
         title: 'Заглавие'
         start_date: 'Начална дата'
         end_date: 'Крайна дата'
@@ -25,4 +27,6 @@ bg:
         published: 'Публично видимо'
         priority: 'Приоритет'
       category:
+        name: 'Име'
+      media_type:
         name: 'Име'
