@@ -10,6 +10,7 @@ gem 'dalli'
 gem 'rails-i18n'
 gem 'sanitize'
 gem 'rdiscount'
+gem 'activeadmin'
 
 group :production do
   gem 'pg'
