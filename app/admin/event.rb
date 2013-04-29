@@ -16,8 +16,8 @@ ActiveAdmin.register Event do
       f.input :category
       f.input :title
       f.input :start_date, start_year: 1980, end_year: Date.current.year
-      f.input :end_date, start_year: 1980, end_year: Date.current.year
-      f.input :description
+      f.input :end_date, start_year: 1980, end_year: Date.current.year, hint: t('admin.events.end_date_hints')
+      f.input :description, hint: t('admin.formatting_hints')
       f.input :published
       f.input :priority
     end

@@ -5,3 +5,24 @@ bg:
   nav:
     home: 'Начало'
     about: 'За проекта'
+
+  admin:
+    formatting_hints: 'Това поле се форматира според правилата на Markdown.'
+    events:
+      end_date_hints: 'Не е задължително да посочите крайна дата.'
+
+  activerecord:
+    models:
+      event: 'Събитие'
+      category: 'Категория'
+    attributes:
+      event:
+        category: 'Категория'
+        title: 'Заглавие'
+        start_date: 'Начална дата'
+        end_date: 'Крайна дата'
+        description: 'Детайли'
+        published: 'Публично видимо'
+        priority: 'Приоритет'
+      category:
+        name: 'Име'
