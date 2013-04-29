@@ -23,7 +23,7 @@ bg:
     has_many_delete: "Изтриване"
     has_many_remove: "Премахване"
     filter: "Филтриране"
-    clear_filters: "Изчистване на филтрите"
+    clear_filters: "Изчистване"
     search_field: "Търсене по %{field}"
     equal_to: "равно на"
     greater_than: "по-голямо от"
