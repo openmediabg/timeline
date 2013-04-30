@@ -19,4 +19,15 @@ module ApplicationHelper
     else              'info'
     end
   end
+
+  def page_title(title = nil)
+    title ||= @page_title
+    application_name = t('application.name')
+
+    if title
+      t 'application.title', title: title, application_name: application_name
+    else
+      application_name
+    end
+  end
 end
