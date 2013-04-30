@@ -13,6 +13,8 @@ bg:
     formatting_hints: 'Това поле се форматира според правилата на Markdown.'
     events:
       end_date_hints: 'Не е задължително да посочите крайна дата.'
+    pages:
+      slug_hints: 'Използвайте само латински букви, цифри, тирета и/или долни черти.'
 
   activerecord:
     models:
@@ -20,6 +22,7 @@ bg:
       event: 'Събитие'
       category: 'Категория'
       media_type: 'Тип медия'
+      page: 'Страница'
     attributes:
       admin_user:
         email: 'Имейл'
@@ -48,6 +51,12 @@ bg:
         name: 'Име'
       media_type:
         name: 'Име'
+      page:
+        slug: 'Име за URL'
+        title: 'Заглавие'
+        content: 'Съдържание'
+        published: 'Публикувана'
+
   attributes:
     id: 'Ид.'
     created_at: 'Създаване'
