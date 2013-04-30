@@ -8,4 +8,7 @@ class Event < ActiveRecord::Base
 
   attr_accessible :category_id, :title, :start_date, :end_date, :description, :published, :priority,
                   :media_type_ids
+
+  scope :published, where(published: true)
+  scope :in_chronological_order, order(arel_table[:start_date].asc)
 end
