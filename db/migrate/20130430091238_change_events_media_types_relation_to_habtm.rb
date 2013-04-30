@@ -8,7 +8,7 @@ class ChangeEventsMediaTypesRelationToHabtm < ActiveRecord::Migration
   end
 
   def up
-    create_table :events_media_types, primary_key: false do |t|
+    create_table :events_media_types, id: false do |t|
       t.integer :event_id, null: false
       t.integer :media_type_id, null: false
     end

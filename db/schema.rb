@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130430091238) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "events_media_types", :force => true do |t|
+  create_table "events_media_types", :id => false, :force => true do |t|
     t.integer "event_id",      :null => false
     t.integer "media_type_id", :null => false
   end
