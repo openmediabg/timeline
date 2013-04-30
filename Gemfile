@@ -13,14 +13,7 @@ gem 'sanitize'
 gem 'rdiscount'
 gem 'activeadmin'
 gem 'sentry-raven'
-
-group :production do
-  gem 'pg'
-end
-
-group :development do
-  gem 'sqlite3'
-end
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
