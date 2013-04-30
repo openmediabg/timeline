@@ -18,4 +18,21 @@ ActiveAdmin.register Page do
     end
     f.actions
   end
+
+  show do |resource|
+    panel I18n.t('texts.details') do
+      attributes_table_for resource do
+        row :id
+        row :slug
+        row :title
+        row :content do
+          markup resource.content
+        end
+        row :published
+        row :created_at
+        row :updated_at
+      end
+    end
+    active_admin_comments
+  end
 end
