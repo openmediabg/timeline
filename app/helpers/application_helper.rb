@@ -1,3 +1,5 @@
+require_dependency 'markup'
+
 module ApplicationHelper
   def markup(text)
     Markup.format text
