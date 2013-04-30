@@ -30,3 +30,7 @@ bg:
         name: 'Име'
       media_type:
         name: 'Име'
+  attributes:
+    id: 'Ид.'
+    created_at: 'Създаване'
+    updated_at: 'Последна промяна'
