@@ -6,4 +6,10 @@ class Page < ActiveRecord::Base
   attr_accessible :slug, :title, :content, :published
 
   scope :published, where(published: true)
+
+  class << self
+    def by_slug(slug)
+      published.where(slug: slug).first or raise ActiveRecord::RecordNotFound
+    end
+  end
 end
