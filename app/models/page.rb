@@ -9,7 +9,7 @@ class Page < ActiveRecord::Base
 
   class << self
     def by_slug(slug)
-      published.where(slug: slug).first or raise ActiveRecord::RecordNotFound
+      published.where(slug: slug).first
     end
   end
 end
