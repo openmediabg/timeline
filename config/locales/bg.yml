@@ -2,6 +2,9 @@ bg:
   application:
     name: 'Таймлайн на българските медии'
 
+  texts:
+    details: 'Детайли'
+
   nav:
     home: 'Начало'
     about: 'За проекта'
@@ -13,10 +16,23 @@ bg:
 
   activerecord:
     models:
+      admin_user: 'Администратор'
       event: 'Събитие'
       category: 'Категория'
       media_type: 'Тип медия'
     attributes:
+      admin_user:
+        email: 'Имейл'
+        password: 'Парола'
+        password_confirmation: 'Паролата отново'
+        sign_in_count: 'Брой влизания'
+        current_sign_in_at: 'Текущ вход'
+        last_sign_in_at: 'Последен вход'
+        current_sign_in_ip: 'Текущ IP-адрес'
+        last_sign_in_ip: 'Последен IP-адрес'
+        reset_password_token: 'Ключ за нова парола'
+        reset_password_sent_at: 'Ключ за нова парола изпратен на'
+        remember_created_at: 'Ключ за запомняне създаден на'
       event:
         category: 'Категория'
         category_id: 'Категория'
