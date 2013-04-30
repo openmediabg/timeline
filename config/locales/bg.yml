@@ -40,8 +40,7 @@ bg:
       event:
         category: 'Категория'
         category_id: 'Категория'
-        media_type: 'Тип медия'
-        media_type_id: 'Тип медия'
+        media_types: 'Типове медия'
         title: 'Заглавие'
         start_date: 'Начална дата'
         end_date: 'Крайна дата'
