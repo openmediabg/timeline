@@ -2,3 +2,10 @@
 //= require twitter/responsive
 //= require_self
 //= require_tree .
+
+@media (min-width: 980px) {
+	body {
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+}
