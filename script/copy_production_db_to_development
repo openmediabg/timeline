@@ -1,0 +1,3 @@
+#!/bin/sh
+
+heroku pgbackups:capture && curl `heroku pgbackups:url` | pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d bulgarian_media_timeline_development
