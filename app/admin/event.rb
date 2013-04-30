@@ -3,7 +3,9 @@ ActiveAdmin.register Event do
     selectable_column
     id_column
     column :category
-    column :media_type
+    column :media_types do |resource|
+      resource.media_types.map { |media_type| auto_link media_type }.to_sentence.html_safe
+    end
     column :title
     column :start_date
     column :end_date
