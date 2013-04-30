@@ -8,7 +8,7 @@ module ApplicationHelper
   def top_navigation_urls
     {
       I18n.t('nav.home')                    => root_path,
-      I18n.t('nav.about')                   => 'TODO',
+      I18n.t('nav.about')                   => page_path(:about),
     }
   end
 
