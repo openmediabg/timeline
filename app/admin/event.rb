@@ -25,4 +25,27 @@ ActiveAdmin.register Event do
     end
     f.actions
   end
+
+  show do |resource|
+    panel I18n.t('texts.details') do
+      attributes_table_for resource do
+        row :id
+        row :category
+        row :media_types do
+          resource.media_types.map { |media_type| auto_link media_type }.to_sentence.html_safe
+        end
+        row :title
+        row :start_date
+        row :end_date
+        row :description do
+          markup resource.description
+        end
+        row :published
+        row :priority
+        row :created_at
+        row :updated_at
+      end
+    end
+    active_admin_comments
+  end
 end
