@@ -12,6 +12,7 @@ gem 'rails-i18n'
 gem 'sanitize'
 gem 'rdiscount'
 gem 'activeadmin'
+gem 'sentry-raven'
 
 group :production do
   gem 'pg'

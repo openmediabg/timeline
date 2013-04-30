@@ -64,10 +64,13 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     has_scope (0.5.1)
+    hashie (2.0.4)
     hike (1.2.2)
     i18n (0.6.1)
     inherited_resources (1.4.0)
@@ -95,6 +98,7 @@ GEM
       polyamorous (~> 0.5.0)
     mime-types (1.23)
     multi_json (1.7.2)
+    multipart-post (1.2.0)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     pg (0.14.0)
@@ -142,6 +146,11 @@ GEM
     sass-twitter-bootstrap (2.3.0)
       railties
       sass
+    sentry-raven (0.4.6)
+      faraday (>= 0.7.6)
+      hashie
+      multi_json (~> 1.0)
+      uuidtools
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -163,6 +172,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.4)
     warden (1.2.1)
       rack (>= 1.0)
 
@@ -182,6 +192,7 @@ DEPENDENCIES
   sanitize
   sass-rails (~> 3.2.3)
   sass-twitter-bootstrap
+  sentry-raven
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)
