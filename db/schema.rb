@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430083933) do
+ActiveRecord::Schema.define(:version => 20130430091238) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -55,17 +55,23 @@ ActiveRecord::Schema.define(:version => 20130430083933) do
   add_index "categories", ["name"], :name => "index_categories_on_name", :unique => true
 
   create_table "events", :force => true do |t|
-    t.integer  "category_id",                     :null => false
-    t.string   "title",                           :null => false
+    t.integer  "category_id",                   :null => false
+    t.string   "title",                         :null => false
     t.date     "start_date"
     t.date     "end_date"
     t.text     "description"
-    t.boolean  "published",     :default => true, :null => false
-    t.integer  "priority",      :default => 0,    :null => false
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.integer  "media_type_id"
+    t.boolean  "published",   :default => true, :null => false
+    t.integer  "priority",    :default => 0,    :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
+
+  create_table "events_media_types", :force => true do |t|
+    t.integer "event_id",      :null => false
+    t.integer "media_type_id", :null => false
+  end
+
+  add_index "events_media_types", ["event_id", "media_type_id"], :name => "index_events_media_types_on_event_id_and_media_type_id", :unique => true
 
   create_table "media_types", :force => true do |t|
     t.string   "name",       :null => false

@@ -15,7 +15,7 @@ ActiveAdmin.register Event do
   form do |f|
     f.inputs do
       f.input :category
-      f.input :media_type
+      f.input :media_types, as: :check_boxes
       f.input :title
       f.input :start_date, start_year: 1980, end_year: Date.current.year
       f.input :end_date, start_year: 1980, end_year: Date.current.year, hint: t('admin.events.end_date_hints')
