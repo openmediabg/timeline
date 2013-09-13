@@ -1,7 +1,10 @@
 #Тimeline
+
 ========
 
 Интерактивен Timeline на новата българска журналистика - от 1989 година до момента.
+
+Demo: http://bulgarian-media-timeline.herokuapp.com/
 
 ##Обща информация:
 
