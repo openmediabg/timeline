@@ -4,6 +4,14 @@
 //= require_self
 //= require_tree .
 
+.container,
+.navbar-fixed-top .container {
+	max-width: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 10px 0 20px;
+}
+
 @media (min-width: 980px) {
 	body {
 		padding-top: 80px;
