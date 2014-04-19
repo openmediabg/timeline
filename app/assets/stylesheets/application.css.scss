@@ -4,16 +4,6 @@
 //= require_self
 //= require_tree .
 
-body.home.index > .container {
-	width: 100%;
-	box-sizing: border-box;
-	padding: 0;
-}
-
-#media-timeline {
-	border-style: none;
-}
-
 @media (min-width: 980px) {
 	body {
 		padding-top: 80px;
