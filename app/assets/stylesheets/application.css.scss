@@ -4,6 +4,8 @@
 //= require_self
 //= require_tree .
 
+@import 'variables';
+
 .container,
 .navbar-fixed-top .container {
 	max-width: none;
@@ -13,7 +15,7 @@
 }
 
 body {
-	font-family: "lucida grande", tahoma, arial, verdana, sans-serif;
+	font-family: $text-font;
 }
 
 @media (min-width: 980px) {

@@ -1,7 +1,9 @@
+@import 'variables';
+
 body.pages .page {
 	max-width: 760px;
 	margin: 0 auto;
-	font-family: "lucida grande", tahoma, arial, verdana, sans-serif;
+	font-family: $text-font;
 	font-size: 16px;
 	line-height: 1.5em;
 }
@@ -12,7 +14,7 @@ body.pages .page h3,
 body.pages .page h4,
 body.pages .page h5,
 body.pages .page h6 {
-	font-family: "georgia", "times new roman", "times", serif;
+	font-family: $title-font;
 	font-weight: normal;
 	margin: 1.3em 0 0.8em 0;
 	line-height: 1.5em;
