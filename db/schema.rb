@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430091238) do
+ActiveRecord::Schema.define(:version => 20140420084324) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130430091238) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "events_media_types", :id => false, :force => true do |t|
+  create_table "events_media_types", :force => true do |t|
     t.integer "event_id",      :null => false
     t.integer "media_type_id", :null => false
   end
@@ -91,5 +91,12 @@ ActiveRecord::Schema.define(:version => 20130430091238) do
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
+
+  create_table "people", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

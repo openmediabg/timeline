@@ -24,6 +24,7 @@ bg:
       category: 'Категория'
       media_type: 'Тип медия'
       page: 'Страница'
+      person: 'Личност'
     attributes:
       admin_user:
         email: 'Имейл'
@@ -56,6 +57,9 @@ bg:
         title: 'Заглавие'
         content: 'Съдържание'
         published: 'Публикувана'
+      person:
+        name: 'Име'
+        description: 'Подробности'
 
   attributes:
     id: 'Ид.'
