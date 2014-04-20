@@ -3,6 +3,9 @@ ActiveAdmin.register Media do
     selectable_column
     id_column
     column :name
+    column :media_types do |resource|
+      resource.media_types.map { |media_type| auto_link media_type }.to_sentence.html_safe
+    end
     column :description do |row|
       row.description.truncate 30
     end
@@ -15,6 +18,7 @@ ActiveAdmin.register Media do
   form do |f|
     f.inputs do
       f.input :name
+      f.input :media_types, as: :check_boxes
       f.input :description, hint: t('admin.formatting_hints')
       f.input :year_created
       f.input :year_closed
@@ -30,6 +34,9 @@ ActiveAdmin.register Media do
       attributes_table_for resource do
         row :id
         row :name
+        row :media_types do
+          resource.media_types.map { |media_type| auto_link media_type }.to_sentence.html_safe
+        end
         row :description do
           markup resource.description
         end

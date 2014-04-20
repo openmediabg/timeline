@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140420093138) do
+ActiveRecord::Schema.define(:version => 20140420102535) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -96,6 +96,13 @@ ActiveRecord::Schema.define(:version => 20140420093138) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
+
+  create_table "media_media_types", :force => true do |t|
+    t.integer "media_id",      :null => false
+    t.integer "media_type_id", :null => false
+  end
+
+  add_index "media_media_types", ["media_id", "media_type_id"], :name => "index_media_media_types_on_media_id_and_media_type_id", :unique => true
 
   create_table "media_people", :force => true do |t|
     t.integer "media_id",  :null => false

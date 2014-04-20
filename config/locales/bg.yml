@@ -67,6 +67,7 @@ bg:
         events: 'Свързани събития'
       media:
         name: 'Име'
+        media_types: 'Тип'
         description: 'Подробности'
         year_created: 'Година на създаване'
         year_closed: 'Година на закриване'
