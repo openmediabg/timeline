@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140420084324) do
+ActiveRecord::Schema.define(:version => 20140420090307) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,6 +72,16 @@ ActiveRecord::Schema.define(:version => 20140420084324) do
   end
 
   add_index "events_media_types", ["event_id", "media_type_id"], :name => "index_events_media_types_on_event_id_and_media_type_id", :unique => true
+
+  create_table "media", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "year_created"
+    t.integer  "year_closed"
+    t.integer  "current_owner_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "media_types", :force => true do |t|
     t.string   "name",       :null => false

@@ -25,6 +25,7 @@ bg:
       media_type: 'Тип медия'
       page: 'Страница'
       person: 'Личност'
+      media: 'Медия'
     attributes:
       admin_user:
         email: 'Имейл'
@@ -60,6 +61,12 @@ bg:
       person:
         name: 'Име'
         description: 'Подробности'
+      media:
+        name: 'Име'
+        description: 'Подробности'
+        year_created: 'Година на създаване'
+        year_closed: 'Година на закриване'
+        current_owner: 'Текущ собственик'
 
   attributes:
     id: 'Ид.'
