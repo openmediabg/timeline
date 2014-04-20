@@ -3,7 +3,9 @@ ActiveAdmin.register Person do
     selectable_column
     id_column
     column :name
-    column :description
+    column :description do |row|
+      row.description.truncate 50
+    end
     column :updated_at
     default_actions
   end
