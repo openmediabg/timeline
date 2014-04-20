@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140420090307) do
+ActiveRecord::Schema.define(:version => 20140420093138) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -66,12 +66,26 @@ ActiveRecord::Schema.define(:version => 20140420090307) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "events_media", :force => true do |t|
+    t.integer "event_id", :null => false
+    t.integer "media_id", :null => false
+  end
+
+  add_index "events_media", ["event_id", "media_id"], :name => "index_events_media_on_event_id_and_media_id", :unique => true
+
   create_table "events_media_types", :force => true do |t|
     t.integer "event_id",      :null => false
     t.integer "media_type_id", :null => false
   end
 
   add_index "events_media_types", ["event_id", "media_type_id"], :name => "index_events_media_types_on_event_id_and_media_type_id", :unique => true
+
+  create_table "events_people", :force => true do |t|
+    t.integer "event_id",  :null => false
+    t.integer "person_id", :null => false
+  end
+
+  add_index "events_people", ["event_id", "person_id"], :name => "index_events_people_on_event_id_and_person_id", :unique => true
 
   create_table "media", :force => true do |t|
     t.string   "name"
@@ -82,6 +96,13 @@ ActiveRecord::Schema.define(:version => 20140420090307) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
+
+  create_table "media_people", :force => true do |t|
+    t.integer "media_id",  :null => false
+    t.integer "person_id", :null => false
+  end
+
+  add_index "media_people", ["media_id", "person_id"], :name => "index_media_people_on_media_id_and_person_id", :unique => true
 
   create_table "media_types", :force => true do |t|
     t.string   "name",       :null => false

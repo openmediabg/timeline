@@ -24,6 +24,8 @@ ActiveAdmin.register Event do
       f.input :description, hint: t('admin.formatting_hints')
       f.input :published
       f.input :priority
+      f.input :media, as: :check_boxes
+      f.input :people, as: :check_boxes
     end
     f.actions
   end
@@ -41,6 +43,12 @@ ActiveAdmin.register Event do
         row :end_date
         row :description do
           markup resource.description
+        end
+        row :media do
+          resource.media.map { |media| auto_link media }.to_sentence.html_safe
+        end
+        row :people do
+          resource.people.map { |event| auto_link event }.to_sentence.html_safe
         end
         row :published
         row :priority

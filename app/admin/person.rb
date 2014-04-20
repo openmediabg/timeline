@@ -14,6 +14,8 @@ ActiveAdmin.register Person do
     f.inputs do
       f.input :name
       f.input :description, hint: t('admin.formatting_hints')
+      f.input :media, as: :check_boxes
+      f.input :events, as: :check_boxes
     end
     f.actions
   end
@@ -25,6 +27,12 @@ ActiveAdmin.register Person do
         row :name
         row :description do
           markup resource.description
+        end
+        row :media do
+          resource.media.map { |media| auto_link media }.to_sentence.html_safe
+        end
+        row :events do
+          resource.events.map { |event| auto_link event }.to_sentence.html_safe
         end
         row :created_at
         row :updated_at

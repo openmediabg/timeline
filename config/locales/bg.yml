@@ -49,6 +49,8 @@ bg:
         description: 'Детайли'
         published: 'Публично видимо'
         priority: 'Приоритет'
+        people: 'Свързани личности'
+        media: 'Свързани медии'
       category:
         name: 'Име'
       media_type:
@@ -61,12 +63,16 @@ bg:
       person:
         name: 'Име'
         description: 'Подробности'
+        media: 'Свързани медии'
+        events: 'Свързани събития'
       media:
         name: 'Име'
         description: 'Подробности'
         year_created: 'Година на създаване'
         year_closed: 'Година на закриване'
         current_owner: 'Текущ собственик'
+        people: 'Свързани личности'
+        events: 'Свързани събития'
 
   attributes:
     id: 'Ид.'

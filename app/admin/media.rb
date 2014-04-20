@@ -19,6 +19,8 @@ ActiveAdmin.register Media do
       f.input :year_created
       f.input :year_closed
       f.input :current_owner
+      f.input :people, as: :check_boxes
+      f.input :events, as: :check_boxes
     end
     f.actions
   end
@@ -34,6 +36,12 @@ ActiveAdmin.register Media do
         row :year_created
         row :year_closed
         row :current_owner
+        row :people do
+          resource.people.map { |person| auto_link person }.to_sentence.html_safe
+        end
+        row :events do
+          resource.events.map { |event| auto_link event }.to_sentence.html_safe
+        end
         row :created_at
         row :updated_at
       end
