@@ -13,6 +13,7 @@ gem 'activeadmin'
 gem 'sentry-raven'
 gem 'pg'
 gem 'nokogiri', '~> 1.6'
+gem 'yaml_db'
 
 group :development do
   gem 'capistrano'

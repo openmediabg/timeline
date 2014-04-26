@@ -189,6 +189,7 @@ GEM
     uuidtools (2.1.4)
     warden (1.2.1)
       rack (>= 1.0)
+    yaml_db (0.2.3)
 
 PLATFORMS
   ruby
@@ -213,3 +214,4 @@ DEPENDENCIES
   sass-twitter-bootstrap
   sentry-raven
   uglifier (>= 1.0.3)
+  yaml_db
