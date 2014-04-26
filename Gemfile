@@ -14,6 +14,7 @@ gem 'rdiscount'
 gem 'activeadmin'
 gem 'sentry-raven'
 gem 'pg'
+gem 'nokogiri', '~> 1.6'
 
 group :development do
   gem 'capistrano'
