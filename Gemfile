@@ -17,7 +17,6 @@ gem 'pg'
 
 group :development do
   gem 'capistrano'
-  gem 'capistrano-rbenv'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
 end
