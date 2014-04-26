@@ -2,7 +2,7 @@
 
 Интерактивен Timeline на новата българска журналистика - от 1989 година до момента.
 
-Demo: http://bulgarian-media-timeline.herokuapp.com/
+Demo: http://timeline.openmedia.bg/
 
 ## Обща информация:
 
