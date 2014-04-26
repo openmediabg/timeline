@@ -7,7 +7,8 @@ set :deploy_to,       "/home/openmedia/timeline.openmedia.bg"
 set :linked_files,    %w(config/database.yml)
 set :linked_dirs,     %w(bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system)
 set :keep_releases,   20
-set :rails_env,      'production'
+set :rails_env,       'production'
+set :bundle_bins,     fetch(:bundle_bins, []) + %w(puma pumactl)
 
 namespace :deploy do
   desc 'Restart the application'
