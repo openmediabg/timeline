@@ -15,6 +15,13 @@ gem 'activeadmin'
 gem 'sentry-raven'
 gem 'pg'
 
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
