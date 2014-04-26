@@ -14,7 +14,9 @@ namespace :deploy do
   desc 'Restart the application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute 'pumactl', '--state', current_path.join('tmp/pids/puma.state'), 'restart'
+      within current_path do
+        execute 'pumactl', '--state', current_path.join('tmp/pids/puma.state'), 'restart'
+      end
     end
   end
 
