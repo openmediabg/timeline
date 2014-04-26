@@ -4,7 +4,7 @@ ruby '2.1.1'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
-gem 'unicorn'
+gem 'puma'
 gem 'sass-twitter-bootstrap'
 gem 'memcachier'
 gem 'dalli'
