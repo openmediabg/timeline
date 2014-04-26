@@ -1,3 +1,12 @@
 #!/bin/sh
 
-heroku pgbackups:capture && curl `heroku pgbackups:url` | pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d bulgarian_media_timeline_development
+set -e
+
+DUMP_FILE="db/data.yml"
+PROJECT_ROOT="`dirname $0`/../"
+REMOTE_SERVER="openmedia@marla.ludost.net"
+REMOTE_DEPLOYMENT_PATH="timeline.openmedia.bg/current"
+
+ssh $REMOTE_SERVER "cd $REMOTE_DEPLOYMENT_PATH && bundle exec rake db:dump"
+scp $REMOTE_SERVER:$REMOTE_DEPLOYMENT_PATH/$DUMP_FILE $PROJECT_ROOT/$DUMP_FILE
+bundle exec rake db:load
