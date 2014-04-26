@@ -14,3 +14,6 @@
 /log/*.log
 /tmp
 TODO.txt
+
+# Database dumps
+db/data.yml
