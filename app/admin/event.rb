@@ -57,7 +57,7 @@ ActiveAdmin.register Event do
         row :image do
           if resource.image?
             link_to resource.image.url(:original), target: '_blank' do
-              image_tag resource.image.url(:small), size: '100x100', alt: resource.image_caption
+              image_tag resource.image.url(:small), width: 100, alt: resource.image_caption
             end
           end
         end
