@@ -12,6 +12,7 @@ class Event < ActiveRecord::Base
                   :media_type_ids, :person_ids, :media_ids, :image, :image_credit, :image_caption
 
   has_attached_file :image, styles: {
+    micro:  '50x50#',
     small:  '200x200>',
     medium: '450x450>',
     large:  '900x900>',
