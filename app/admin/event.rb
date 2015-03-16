@@ -7,6 +7,10 @@ ActiveAdmin.register Event do
         link_to [:admin, resource] do
           image_tag resource.image.url(:micro), size: '20x20'
         end
+      elsif resource.external_image_url
+        link_to [:admin, resource] do
+          image_tag resource.external_image_url, style: 'max-width: 20px; max-height: 20px;'
+        end
       end
     end
     column :category
@@ -29,6 +33,7 @@ ActiveAdmin.register Event do
       f.input :start_date, start_year: 1980, end_year: Date.current.year
       f.input :end_date, start_year: 1980, end_year: Date.current.year, hint: t('admin.events.end_date_hints')
       f.input :description, hint: t('admin.formatting_hints')
+      f.input :external_image_url, hint: t('admin.events.external_image_url_hints')
       f.input :image, hint: t('admin.events.image_hints')
       f.input :image_caption
       f.input :image_credit
@@ -58,6 +63,13 @@ ActiveAdmin.register Event do
           if resource.image?
             link_to resource.image.url(:original), target: '_blank' do
               image_tag resource.image.url(:small), width: 100, alt: resource.image_caption
+            end
+          end
+        end
+        row :external_image_url do
+          if resource.external_image_url
+            link_to resource.external_image_url, target: '_blank' do
+              image_tag resource.external_image_url, width: 100, alt: resource.external_image_url, title: resource.external_image_url
             end
           end
         end

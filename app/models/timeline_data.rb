@@ -30,9 +30,15 @@ class TimelineData
         text:      markup(event.description),
       }
 
-      if event.image?
+      if event.image? or event.external_image_url
+        image_url = if event.image?
+                      event.image.url(:medium)
+                    else
+                      event.external_image_url
+                    end
+
         details[:asset] = {
-          media:   event.image.url(:medium),
+          media:   image_url,
           credit:  event.image_credit,
           caption: event.image_caption,
         }

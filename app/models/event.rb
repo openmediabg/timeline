@@ -9,7 +9,8 @@ class Event < ActiveRecord::Base
   validates :published, inclusion: [true, false]
 
   attr_accessible :category_id, :title, :start_date, :end_date, :description, :published, :priority,
-                  :media_type_ids, :person_ids, :media_ids, :image, :image_credit, :image_caption
+                  :media_type_ids, :person_ids, :media_ids, :image, :image_credit, :image_caption,
+                  :external_image_url
 
   has_attached_file :image, styles: {
     micro:  '50x50#',

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150316101131) do
+ActiveRecord::Schema.define(:version => 20150316120922) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20150316101131) do
     t.datetime "image_updated_at"
     t.string   "image_caption"
     t.string   "image_credit"
+    t.string   "external_image_url"
   end
 
   create_table "events_media", :force => true do |t|
