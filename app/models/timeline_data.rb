@@ -23,12 +23,22 @@ class TimelineData
 
   def events_as_json
     @events.map do |event|
-      {
+      details = {
         startDate: format_date(event.start_date),
         endDate:   format_date(event.end_date || event.start_date),
         headline:  event.title,
         text:      markup(event.description),
       }
+
+      if event.image?
+        details[:asset] = {
+          media:   event.image.url(:medium),
+          credit:  event.image_credit,
+          caption: event.image_caption,
+        }
+      end
+
+      details
     end
   end
 

@@ -22,6 +22,9 @@ ActiveAdmin.register Event do
       f.input :start_date, start_year: 1980, end_year: Date.current.year
       f.input :end_date, start_year: 1980, end_year: Date.current.year, hint: t('admin.events.end_date_hints')
       f.input :description, hint: t('admin.formatting_hints')
+      f.input :image, hint: t('admin.events.image_hints')
+      f.input :image_caption
+      f.input :image_credit
       f.input :published
       f.input :priority
       f.input :media, as: :check_boxes
@@ -44,6 +47,15 @@ ActiveAdmin.register Event do
         row :description do
           markup resource.description
         end
+        row :image do
+          if resource.image?
+            link_to resource.image.url(:original), target: '_blank' do
+              image_tag resource.image.url(:small), size: '100x100', alt: resource.image_caption
+            end
+          end
+        end
+        row :image_caption
+        row :image_credit
         row :media do
           resource.media.map { |media| auto_link media }.to_sentence.html_safe
         end

@@ -17,3 +17,6 @@ TODO.txt
 
 # Database dumps
 db/data.yml
+
+# File uploads
+/public/system/*

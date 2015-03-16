@@ -14,6 +14,7 @@ gem 'sentry-raven'
 gem 'pg'
 gem 'nokogiri', '~> 1.6'
 gem 'yaml_db'
+gem 'paperclip'
 
 group :development do
   gem 'capistrano'
