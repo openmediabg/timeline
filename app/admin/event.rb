@@ -2,6 +2,13 @@ ActiveAdmin.register Event do
   index do
     selectable_column
     id_column
+    column class: 'image' do |resource|
+      if resource.image?
+        link_to [:admin, resource] do
+          image_tag resource.image.url(:micro), size: '20x20'
+        end
+      end
+    end
     column :category
     column :media_types do |resource|
       resource.media_types.map { |media_type| auto_link media_type }.to_sentence.html_safe
